@@ -1,0 +1,14 @@
+extends layout
+
+block layout-content
+  div.indexDiv
+    div.View.WelcomeView
+      div.View
+        h1.Banner TITLE
+        div.Message
+          div.Title
+          h3 Making the Best
+          form(action="/user" method="post") Name :
+            input(type="text" name="name" placeholder="User Name") 
+            button(type="submit") click
+
