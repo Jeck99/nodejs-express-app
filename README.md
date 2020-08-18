@@ -8,15 +8,15 @@ How to build a simple Node.js and Express app by creating a interface and server
    5.	יצירת גיט איגנור
    6.	בניית טמפלט באינדקס
 
-/* Required External Modules */
+      /* Required External Modules */
 
-/*** App Variables*/
+      /*** App Variables*/
 
-/*** App Configuration*/
+      /*** App Configuration*/
 
-/*** Routes Definitions*/
+      /*** Routes Definitions*/
 
-/*** Server Activation*/
+      /*** Server Activation*/
 
    7.	לייבא מודולים
    8.	app יצירת אובייקט 
