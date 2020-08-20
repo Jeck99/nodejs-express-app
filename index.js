@@ -23,10 +23,17 @@ app.get('/pics', (req, res) => {
 })
 app.route('/user')
     .get((req, res) => {
-        res.send('401  Page not Found')
+        res.render("pageNotFound")
     })
     .post((req, res) => {
-        res.render("user", { user: { name: req.body.first_name, lastName: req.body.last_name } })
+        res.render("user",
+            {
+                user:
+                {
+                    name: req.body.first_name,
+                    lastName: req.body.last_name
+                }
+            })
     })
 
 app.post('/picView', (req, res) => {

@@ -3,4 +3,10 @@ extends layout
 block layout-content
   div.indexDiv
     div.View.WelcomeView
-      div.View 4755743573458743757468
+      div.View 
+        form(action="/user" method="post")
+          label(for="first_name") first_name
+          input(type="text" name="first_name")
+          label(for="last_name") last_name
+          input(type="text" name="last_name")
+          button(type="submit")
