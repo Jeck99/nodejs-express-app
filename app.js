@@ -45,4 +45,4 @@ app.post('/picView', (req, res) => {
     })
 })
 /*** Server Activation הרצת השרת*/
-app.listen(process.env.port | 4000)
+app.listen(process.env.PORT | 4000)
