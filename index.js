@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 
 /*** App Variables משתנים*/
 const app = express();
-const port = process.env.port | 4000;
+// const port = process.env.port | 4000;
 
 /***  App Configuration וההגדרות APP יצירת ה*/
 app.set("views", path.join(__dirname, "views"));
@@ -45,4 +45,4 @@ app.post('/picView', (req, res) => {
     })
 })
 /*** Server Activation הרצת השרת*/
-app.listen(port)
+app.listen(process.env.port | 4000)
