@@ -7,9 +7,15 @@ html
         meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
         meta(name="theme-color" content="#000000")
         title #{title} | TITLE
-        link(rel="stylesheet", href="/style.css")
+        link(rel="stylesheet" href="/style.css")
     body
-        div#sidebar
-        div#navbar 
-        block layout-content
-        footer
+        div.site
+            nav.site-nav flex-center
+                h1.section-title NAV
+            main.site-content
+                header.content-header-flex-center
+                    h1.section-title HEADER
+                section.content-topic-flex-center
+                    h1.section-title TOPIC
+                    block layout-content
+

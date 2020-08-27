@@ -1,64 +1,42 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:800|Merriweather+Sans|Share+Tech+Mono");
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400); */
 
-* {
-    box-sizing: border-box;
+.site {
+  display: flex;
+  background: red;
 }
 
-html,
-body {
-    height: 100%;
-    width : 100%;
+.site-nav {
+  background: #4e87ea;
+  width: 100%;
+  border: 1px solid red;
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
-    background         : url("589333.jpg");
-    background-size    : cover;
-    background-repeat  : no-repeat;
-    background-position: center;
-    color              : rgb(255, 255, 255);
+.site-content {
+  background: #eee;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.content-header {
+  background: #fff;
+  height: 40px;
+  box-shadow: 0 2px 0 rgba(0,0,0,.15);
+}
+.content-topic {
+  background: #fff;
+  flex-grow: 1;
+  margin: 30px 50px;
+  box-shadow: 5px 5px 0 rgba(0,0,0,.15);
 }
 
-#navbar {
-    height             : 10%;
-    width              : 100%;
-    /* background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(255 71 0 / 43%)); */
-    position           : fixed;
-    background-color   : rgb(5, 17, 187);
-
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-#sidebar {
-    height             : 100%;
-    width              : 10%;
-    /* background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(119, 10, 10, 0.609)); */
-    position           : fixed;
-    background-color   : rgb(17, 245, 17);
-
-}
-
-footer {
-    position        : fixed;
-    left            : 0;
-    bottom          : 0;
-    width           : 100%;
-    background-color: white;
-    color           : white;
-    text-align      : center;
-    height          : 5%;
-}
-
-#notFound {
-    background-size    : cover;
-    background-repeat  : no-repeat;
-    background-position: center;
-}
-.View-UserView,
-.indexDiv {
-    display: inline-block;
-    margin : 66px;
-    width  : 100%;
-    height : 100%;
+.section-title {
+  font-size: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(0,0,0,.25);
+  text-align: center;
 }

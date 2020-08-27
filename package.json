@@ -2,14 +2,13 @@
   "name": "nodejs-express-app",
   "version": "1.0.0",
   "description": "How to build a simple Node.js and Express app by creating a interface and server API",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
     "ui": "browser-sync start --proxy=localhost:4000 --files='**/*.css, **/*.pug, **/*.js' --ignore=node_modules --reload-delay 10 --no-ui --no-notify",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "node app.js"
-
+    "start": "node index.js"
   },
   "author": "Jacob Inggidou",
   "license": "ISC",
@@ -17,6 +16,7 @@
     "body-parser": "^1.19.0",
     "browser-sync": "^2.26.12",
     "express": "^4.17.1",
+    "mongodb": "^3.6.0",
     "node": "^14.8.0",
     "nodemon": "^2.0.4",
     "pug": "^3.0.0"

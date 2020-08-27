@@ -2,7 +2,10 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require("body-parser");
-
+const dataFromMongo = []
+const mongodb = require('mongodb');
+const MongoClient = mongodb.MongoClient.connect(url);
+var url = 'mongodb://localhost:27017/';
 /*** App Variables משתנים*/
 const app = express();
 // const port = process.env.port | 4000;
@@ -23,9 +26,31 @@ app.get('/pics', (req, res) => {
 })
 app.route('/user')
     .get((req, res) => {
-        res.render("pageNotFound")
-    })
-    .post((req, res) => {
+        res.render("pictures", {
+            MongoClient(error, database) => {// use for to connect to the databases  
+                if (error) {
+                    console.log(`MongoClient.connect ${error}`);
+                    throw error;
+                }
+                const dbobject = database.db('postscollection', function (error, response) {  //use for create database
+                    if (error) {
+                        console.log(`dbobject = database ${err}`);
+                    };
+                });
+                postsCollection = dbobject.collection("posts", (err, res) => {
+                    if (err) {
+                        console.log(`postsCollection = dbobject ${err}`);
+                    };
+                });
+                postsCollection.findOne({}, (err, res) => {
+                    if (err) {
+                        res.send(`postsCollection.find ${err}`);
+                    };
+                    return res;
+                })
+            })
+        })
+    }).post((req, res) => {
         res.render("user",
             {
                 user:
